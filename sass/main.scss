@@ -1,0 +1,511 @@
+// Var============================
+
+$color01:#000000;
+$color02:#ffffff;
+$color03:#06bb51;
+$tran-400:ease 400ms all;
+$tran-800:ease 1000ms all;
+
+// Header Section
+
+header {
+    background: url(../img/header.jpg) center/cover;
+    background-repeat: no-repeat;
+    height: 100vh;
+    position: relative;
+    z-index: 0;
+
+
+    nav {
+        position: absolute;
+        top: 0;
+        left: -400px;
+        width: 450px;
+        height: 100vh;
+        transition: $tran-800;
+        z-index: 999999;
+
+        &.nav-toggle {
+            left: 0;
+            transition: $tran-400;
+            background: $color02;
+
+            .nav-btn {
+                background: transparent;
+
+                span {
+                    background: $color01;
+
+                    &::after {
+                        background: $color01;
+                    }
+
+                    &::before {
+                        background: $color01;
+                    }
+                }
+            }
+        }
+
+        .nav-btn {
+            position: absolute;
+            width: 50px;
+            height: 50px;
+            right: 0;
+            top: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+            // background: $color02;
+
+            span {
+                display: block;
+                background: $color02;
+                width: 30px;
+                height: 2px;
+                position: relative;
+
+                &::after {
+                    content: "";
+                    position: absolute;
+                    width: 100%;
+                    height: 100%;
+                    background: $color02;
+                    top: -12px;
+                }
+
+                &::before {
+                    content: "";
+                    position: absolute;
+                    width: 100%;
+                    height: 100%;
+                    background: $color02;
+                    top: 12px;
+                }
+            }
+        }
+    }
+
+    .nav-menu {
+        position: absolute;
+        width: 400px;
+        height: 100%;
+        background: $color01;
+        left: -200px;
+        top: 0;
+        transition: $tran-400;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+
+        &.nav-menu-toggle {
+            left: 0;
+            transition: $tran-800;
+        }
+
+        li {
+            width: 100%;
+            height: 50px;
+
+            &:hover {
+                background: $color02;
+                transition: $tran-400;
+
+                a {
+                    color: $color01;
+                }
+            }
+
+            a {
+                width: 100%;
+                height: 100%;
+                line-height: 50px;
+                text-align: center;
+                color: $color02;
+                font-size: 16px;
+                font-weight: 700;
+                text-transform: uppercase;
+                letter-spacing: 1px;
+            }
+        }
+    }
+
+    .hiro {
+        padding: 20px;
+        border: 10px solid $color02;
+        position: absolute;
+        left: 50px;
+        top: 50%;
+        transform: translateY(-50%);
+
+
+        h1 {
+            font-size: 80px;
+            text-transform: uppercase;
+            color: $color02;
+            letter-spacing: 2px;
+            line-height: .9;
+            font-weight: 700;
+        }
+    }
+
+
+}
+
+
+// Portfolio Section
+
+.portfolio {
+    background: $color02;
+
+    .navbar {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        margin-bottom: 3rem;
+
+        ul {
+            display: flex;
+
+            li {
+                width: 100px;
+                height: 40px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                border-bottom: 3px solid transparent;
+                cursor: pointer;
+                margin: 0 5px;
+
+                &.active {
+                    border-bottom: 3px solid $color01;
+                }
+
+                &:hover {
+                    border-bottom: 3px solid $color01;
+                    transition: $tran-400;
+                }
+
+                a {
+                    color: $color01;
+                    font-weight: bold;
+                    text-transform: uppercase;
+                    letter-spacing: 1px;
+                }
+            }
+        }
+    }
+
+    .row {
+        flex-direction: row;
+
+        .col {
+            height: 480px;
+            margin: 0 5px;
+
+            img {
+                cursor: pointer;
+
+                &:hover {
+                    transform: scale(1.02);
+                    transition: $tran-400;
+                }
+            }
+
+
+            &:nth-child(01) {
+                margin-left: 0;
+
+                img {
+                    height: 100%;
+                }
+
+            }
+
+            &:nth-child(02) {
+                img:nth-child(01) {
+                    height: 235px;
+                    top: 0;
+                }
+
+                img:nth-child(02) {
+                    height: 235px;
+                    bottom: 0;
+                }
+
+            }
+
+            &:nth-child(03) {
+                img {
+                    height: 100%;
+                }
+
+            }
+
+            &:nth-child(04) {
+                img:nth-child(01) {
+                    height: 235px;
+                    top: 0;
+                }
+
+                img:nth-child(02) {
+                    height: 235px;
+                    bottom: 0;
+                }
+
+            }
+
+        }
+    }
+
+
+
+    .btn {
+        background: $color01;
+        color: $color02;
+        margin: 0 auto;
+        margin-top: 3rem;
+
+        &:hover {
+            transform: scale(.98);
+            transition: $tran-400;
+        }
+    }
+}
+
+
+// Clients Section========================
+
+.clients {
+    background: $color01;
+
+    .title {
+        color: $color02;
+        border-color: $color02;
+    }
+
+    .col{
+        height: 240px;
+        background: $color02;
+        margin: 0 10px;
+        &:first-of-type{
+            margin-left: 0;
+        }
+
+        &:last-of-type{
+            margin-right: 0;
+        }
+
+        .client{
+            position: absolute;
+            width: 90%;
+            height: 50px;
+            top: 10px;
+            left: 5%;
+            display: flex;
+            align-items: center;
+            background: $color01;
+            img{
+                width: 100PX;
+                height: 40px;
+                left: 10px;
+
+            }
+            h4{
+                margin-left: 160px;
+                text-transform: uppercase;
+                color: $color02;
+            }
+        }
+
+        .comment{
+            width: 70%;
+            left: 5%;
+            top: 100px;
+            position: absolute;
+        }
+    }
+
+
+}
+
+// About Section========================
+.about {
+    .row {
+
+
+        .col {
+            height: 380px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+
+            img {
+                height: 100%;
+                width: 100%;
+            }
+
+            h4 {
+                font-size: 30px;
+                font-weight: 800;
+                text-transform: uppercase;
+            }
+
+            p {
+                width: 90%;
+                opacity: .8;
+            }
+
+            .btn {
+                background: $color01;
+                color: $color02;
+
+                &:hover {
+                    transform: scale(.98);
+                    transition: $tran-400;
+                }
+            }
+        }
+    }
+}
+
+
+// Contact Section========================
+.contact {
+    background: $color01;
+    color: $color02;
+
+    .title {
+        color: $color02;
+        border-color: white;
+    }
+
+    .col {
+        height: 320px;
+
+        input {
+            background: transparent;
+            font-weight: bold;
+            padding-left: 20px;
+            border: 2px solid $color02;
+            height: 40px;
+            width: 100%;
+            margin-bottom: 20px;
+            color: $color02;
+
+        }
+
+        textarea {
+            height: 140px;
+            background: transparent;
+            font-weight: bold;
+            padding-left: 20px;
+            border: 2px solid $color02;
+            width: 100%;
+            margin-bottom: 20px;
+            color: $color02;
+            line-height: 40px;
+        }
+
+        .btn {
+            background: $color02;
+            color: $color01;
+            cursor: pointer;
+        }
+
+        h4 {
+            width: 100%;
+            font-size: 25px;
+            font-weight: 500;
+            text-transform: uppercase;
+            margin-bottom: 20px;
+        }
+
+        .address {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            position: absolute;
+            top: 0;
+
+
+
+            span {
+                width: 100%;
+                height: 40px;
+                font-weight: bold;
+                display: flex;
+                margin-bottom: 20px;
+                align-items: center;
+                text-transform: capitalize;
+
+                i {
+                    font-size: 20px;
+                    width: 40px;
+                    height: 40px;
+                    background: $color02;
+                    color: $color01;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    margin-right: 20px;
+                }
+            }
+        }
+
+        .social {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            position: absolute;
+            bottom: 0;
+
+            span {
+                display: flex;
+            }
+
+            i {
+                font-size: 20px;
+                width: 40px;
+                height: 40px;
+                background: $color02;
+                color: $color01;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                margin-right: 20px;
+                cursor: pointer;
+            }
+        }
+    }
+}
+
+// Footer Section
+
+footer {
+    text-align: center;
+    padding: 2rem 0;
+    text-transform: capitalize;
+    background: $color03;
+    color: white;
+    font-size: 20px;
+    position: absolute;
+}
+
+
+// Button Scroll==============================
+.btnScroll{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    background: $color03;
+    color: $color02;
+    position: fixed;
+    cursor: pointer;
+    bottom:100px;
+    right: 5px;
+    visibility: hidden;
+}

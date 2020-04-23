@@ -1,0 +1,159 @@
+$color01:#000000;
+$color02:#ffffff;
+$color03:#06bb51;
+$tran-400:ease 400ms all;
+$tran-800:ease 1000ms all;
+
+
+
+@media screen and (max-width:812px) {
+
+
+    .row {
+        flex-direction: column;
+    }
+
+    // Header Section
+
+    header {
+
+        nav{
+            width: 300px;;
+            left: -250px;
+
+            .nav-menu{
+                width: 250px;
+            }
+
+        }
+        .hiro {
+            left: 50%;
+            transform: translateX(-50%);
+            background: $color01;
+            background: transparent;
+
+            h1 {
+                font-size: 40px;
+                text-shadow: 1px 5PX 20PX black;
+            }
+        }
+    }
+
+    // Portfolio Section
+
+    .portfolio {
+        .navbar {
+            ul {
+                li {
+                    width: 50px;
+                    height: 25px;
+
+                    a {
+                        font-size: 10px;
+                    }
+                }
+            }
+        }
+
+        .row {
+            flex-direction: column;
+
+            .col {
+                margin: 5px 0;
+
+                &:first-of-type {
+                    margin-top: 0;
+                }
+
+                &:last-of-type {
+                    margin-bottom: 0;
+                }
+            }
+        }
+    }
+
+    // Clients Section
+
+    .clients {
+        .row {
+            flex-direction: column;
+
+            .col {
+                margin: 5px 0;
+
+                &:first-of-type {
+                    margin-top: 0;
+                }
+
+                &:last-of-type {
+                    margin-bottom: 0;
+                }
+            }
+        }
+    }
+
+    // About Section
+
+    .about {
+        .row {
+            flex-direction: column;
+
+            .col {
+                margin: 20px 0;
+                justify-content: flex-start;
+
+                &:first-of-type {
+                    margin-top: 0;
+                }
+
+                &:last-of-type {
+                    margin-bottom: 0;
+                }
+
+                p{
+                    margin: 20px 0;
+                }
+
+                p:last-of-type{
+                    display: none;
+                }
+            }
+        }
+    }
+
+    // Contact Section
+
+    .contact {
+
+        .row {
+            flex-direction: column;
+
+            .col {
+                margin: 20px 0;
+
+                &:first-of-type {
+                    margin-top: 0;
+                }
+
+                &:last-of-type {
+                    margin-bottom: 0;
+                }
+
+                .address{
+                    i{
+                        margin-right: 10px;
+                    }
+                }
+            }
+        }
+
+    }
+
+    // Footer Section
+    footer{
+        position: absolute;
+        p{
+            font-size: 12px;
+        }
+    }
+}

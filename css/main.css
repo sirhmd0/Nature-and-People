@@ -1,0 +1,570 @@
+/* Header section ===================================================================
+===================================================================================== */
+
+header {
+  background: url(../img/header.jpg) center/cover;
+  background-repeat: no-repeat;
+  height: 100vh;
+  position: relative;
+  z-index: 0;
+}
+
+header nav {
+  position: absolute;
+  top: 0;
+  left: -400px;
+  width: 450px;
+  height: 100vh;
+  -webkit-transition: ease 1000ms all;
+  transition: ease 1000ms all;
+  z-index: 999999;
+}
+
+header nav.nav-toggle {
+  left: 0;
+  -webkit-transition: ease 400ms all;
+  transition: ease 400ms all;
+  background: #ffffff;
+}
+
+header nav.nav-toggle .nav-btn {
+  background: transparent;
+}
+
+header nav.nav-toggle .nav-btn span {
+  background: #000000;
+}
+
+header nav.nav-toggle .nav-btn span::after {
+  background: #000000;
+}
+
+header nav.nav-toggle .nav-btn span::before {
+  background: #000000;
+}
+
+header nav .nav-btn {
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  right: 0;
+  top: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  cursor: pointer;
+}
+
+header nav .nav-btn span {
+  display: block;
+  background: #ffffff;
+  width: 30px;
+  height: 2px;
+  position: relative;
+}
+
+header nav .nav-btn span::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: #ffffff;
+  top: -12px;
+}
+
+header nav .nav-btn span::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: #ffffff;
+  top: 12px;
+}
+
+header .nav-menu {
+  position: absolute;
+  width: 400px;
+  height: 100%;
+  background: #000000;
+  left: -200px;
+  top: 0;
+  -webkit-transition: ease 400ms all;
+  transition: ease 400ms all;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+header .nav-menu.nav-menu-toggle {
+  left: 0;
+  -webkit-transition: ease 1000ms all;
+  transition: ease 1000ms all;
+}
+
+header .nav-menu li {
+  width: 100%;
+  height: 50px;
+}
+
+header .nav-menu li:hover {
+  background: #ffffff;
+  -webkit-transition: ease 400ms all;
+  transition: ease 400ms all;
+}
+
+header .nav-menu li:hover a {
+  color: #000000;
+}
+
+header .nav-menu li a {
+  width: 100%;
+  height: 100%;
+  line-height: 50px;
+  text-align: center;
+  color: #ffffff;
+  font-size: 16px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+header .hiro {
+  padding: 20px;
+  border: 10px solid #ffffff;
+  position: absolute;
+  left: 50px;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+}
+
+header .hiro h1 {
+  font-size: 80px;
+  text-transform: uppercase;
+  color: #ffffff;
+  letter-spacing: 2px;
+  line-height: .9;
+  font-weight: 700;
+}
+
+/* Portfolio section ===================================================================
+===================================================================================== */
+
+.portfolio {
+  background: #ffffff;
+}
+
+.portfolio .navbar {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-bottom: 3rem;
+}
+
+.portfolio .navbar ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.portfolio .navbar ul li {
+  width: 100px;
+  height: 40px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-bottom: 3px solid transparent;
+  cursor: pointer;
+  margin: 0 5px;
+}
+
+.portfolio .navbar ul li.active {
+  border-bottom: 3px solid #000000;
+}
+
+.portfolio .navbar ul li:hover {
+  border-bottom: 3px solid #000000;
+  -webkit-transition: ease 400ms all;
+  transition: ease 400ms all;
+}
+
+.portfolio .navbar ul li a {
+  color: #000000;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.portfolio .row {
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+.portfolio .row .col {
+  height: 480px;
+  margin: 0 5px;
+}
+
+.portfolio .row .col img {
+  cursor: pointer;
+}
+
+.portfolio .row .col img:hover {
+  -webkit-transform: scale(1.02);
+          transform: scale(1.02);
+  -webkit-transition: ease 400ms all;
+  transition: ease 400ms all;
+}
+
+.portfolio .row .col:nth-child(01) {
+  margin-left: 0;
+}
+
+.portfolio .row .col:nth-child(01) img {
+  height: 100%;
+}
+
+.portfolio .row .col:nth-child(02) img:nth-child(01) {
+  height: 235px;
+  top: 0;
+}
+
+.portfolio .row .col:nth-child(02) img:nth-child(02) {
+  height: 235px;
+  bottom: 0;
+}
+
+.portfolio .row .col:nth-child(03) img {
+  height: 100%;
+}
+
+.portfolio .row .col:nth-child(04) img:nth-child(01) {
+  height: 235px;
+  top: 0;
+}
+
+.portfolio .row .col:nth-child(04) img:nth-child(02) {
+  height: 235px;
+  bottom: 0;
+}
+
+.portfolio .btn {
+  background: #000000;
+  color: #ffffff;
+  margin: 0 auto;
+  margin-top: 3rem;
+}
+
+.portfolio .btn:hover {
+  -webkit-transform: scale(0.98);
+          transform: scale(0.98);
+  -webkit-transition: ease 400ms all;
+  transition: ease 400ms all;
+}
+
+/* Clients section ===================================================================
+===================================================================================== */
+
+.clients {
+  background: #000000;
+}
+
+.clients .title {
+  color: #ffffff;
+  border-color: #ffffff;
+}
+
+.clients .col {
+  height: 240px;
+  background: #ffffff;
+  margin: 0 10px;
+}
+
+.clients .col:first-of-type {
+  margin-left: 0;
+}
+
+.clients .col:last-of-type {
+  margin-right: 0;
+}
+
+.clients .col .client {
+  position: absolute;
+  width: 90%;
+  height: 50px;
+  top: 10px;
+  left: 5%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background: #000000;
+}
+
+.clients .col .client img {
+  width: 100PX;
+  height: 40px;
+  left: 10px;
+}
+
+.clients .col .client h4 {
+  margin-left: 160px;
+  text-transform: uppercase;
+  color: #ffffff;
+}
+
+.clients .col .comment {
+  width: 70%;
+  left: 5%;
+  top: 100px;
+  position: absolute;
+}
+
+/* About section ===================================================================
+===================================================================================== */
+
+.about .row .col {
+  height: 380px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.about .row .col img {
+  height: 100%;
+  width: 100%;
+}
+
+.about .row .col h4 {
+  font-size: 30px;
+  font-weight: 800;
+  text-transform: uppercase;
+}
+
+.about .row .col p {
+  width: 90%;
+  opacity: .8;
+}
+
+.about .row .col .btn {
+  background: #000000;
+  color: #ffffff;
+}
+
+.about .row .col .btn:hover {
+  -webkit-transform: scale(0.98);
+          transform: scale(0.98);
+  -webkit-transition: ease 400ms all;
+  transition: ease 400ms all;
+}
+
+/* Contact section ===================================================================
+===================================================================================== */
+
+.contact {
+  background: #000000;
+  color: #ffffff;
+}
+
+.contact .title {
+  color: #ffffff;
+  border-color: white;
+}
+
+.contact .col {
+  height: 320px;
+}
+
+.contact .col input {
+  background: transparent;
+  font-weight: bold;
+  padding-left: 20px;
+  border: 2px solid #ffffff;
+  height: 40px;
+  width: 100%;
+  margin-bottom: 20px;
+  color: #ffffff;
+}
+
+.contact .col textarea {
+  height: 140px;
+  background: transparent;
+  font-weight: bold;
+  padding-left: 20px;
+  border: 2px solid #ffffff;
+  width: 100%;
+  margin-bottom: 20px;
+  color: #ffffff;
+  line-height: 40px;
+}
+
+.contact .col .btn {
+  background: #ffffff;
+  color: #000000;
+  cursor: pointer;
+}
+
+.contact .col h4 {
+  width: 100%;
+  font-size: 25px;
+  font-weight: 500;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+}
+
+.contact .col .address {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: absolute;
+  top: 0;
+}
+
+.contact .col .address span {
+  width: 100%;
+  height: 40px;
+  font-weight: bold;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-bottom: 20px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-transform: capitalize;
+}
+
+.contact .col .address span i {
+  font-size: 20px;
+  width: 40px;
+  height: 40px;
+  background: #ffffff;
+  color: #000000;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-right: 20px;
+}
+
+.contact .col .social {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  position: absolute;
+  bottom: 0;
+}
+
+.contact .col .social span {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.contact .col .social i {
+  font-size: 20px;
+  width: 40px;
+  height: 40px;
+  background: #ffffff;
+  color: #000000;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-right: 20px;
+  cursor: pointer;
+}
+
+/* Footer section ===================================================================
+===================================================================================== */
+
+footer {
+  text-align: center;
+  padding: 2rem 0;
+  text-transform: capitalize;
+  background: #06bb51;
+  color: white;
+  font-size: 20px;
+  position: absolute;
+}
+
+/* Button Scroll ===================================================================
+===================================================================================== */
+
+.btnScroll {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 40px;
+  height: 40px;
+  background: #06bb51;
+  color: #ffffff;
+  position: fixed;
+  cursor: pointer;
+  bottom: 100px;
+  right: 5px;
+  visibility: hidden;
+}
+/*# sourceMappingURL=main.css.map */
